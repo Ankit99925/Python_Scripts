@@ -1,0 +1,7 @@
+[Unit]
+Description=Check OPNsense config for changes
+
+[Service]
+Type=oneshot
+EnvironmentFile=%h/python/opnwatch/creds.env
+ExecStart=%h/python/opnwatch/venv/bin/python %h/python/opnwatch/opnwatch.py
